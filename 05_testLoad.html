@@ -18,6 +18,7 @@
           <figure>
             <img src="billede_1.png" alt="Hund" />
           </figure>
+
           <h3>Artikel 1</h3>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente
@@ -54,28 +55,19 @@
     const paragraf = document.querySelector("p");
     const footer = document.querySelector("footer");
 
-    console.log(overskrift.textContent);
-    console.log(undertitel.textContent);
-    console.log(h3.textContent);
-    console.log(paragraf.textContent);
-    console.log(footer);
+    document.addEventListener("DOMContentLoaded", start);
 
-    const billede_2 = document.querySelector("article:nth-child(1) img");
-    billede_2.src = "billede_2.png";
-    billede_2.alt = "hej med dig";
-    console.log(billede_2.src);
+    function start() {
+      console.log(overskrift.textContent);
+      console.log(undertitel.textContent);
+      console.log(h3.textContent);
+      console.log(paragraf.textContent);
+      console.log(footer);
 
-    // let newArticle = document.createElement("article1");
-    // let newH3 = document.createElement("h3");
-    // let newHeadlineText = document.createTextNode("Mennesker");
-    // newH3.appendChild(newHeadlineText);
-    // let newPic = document.createElement("img");
-    // newPic.src = "https://placeimg.com/400/300/people";
-    // let newContent = document.createElement("p");
-    // newContent.textContent = "Her står der noget om mennesker";
-    // newArticle.appendChild(newPic);
-    // newArticle.appendChild(newH3);
-    // newArticle.appendChild(newContent);
-    // articleSection.appendChild(newArticle);
+      const billede_2 = document.querySelector("article:nth-child(1) img");
+      billede_2.src = "billede_2.png";
+      billede_2.alt = "hej med dig";
+      console.log(billede_2.src);
+    }
   </script>
 </html>
