@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Velkommen</h1>
+    </header>
+    <main>
+      <section id="section">
+        <article class="article1">
+          <h2>Bruno</h2>
+          <figure>
+            <img src="billede_1.png" alt="Hund" />
+          </figure>
+
+          <h3>Artikel 1</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            animi, iure aliquam laboriosam et optio perspiciatis quia nobis
+            architecto inventore, aliquid pariatur suscipit corrupti eveniet
+            provident reprehenderit, praesentium veniam earum.
+          </p>
+        </article>
+        <article class="article2">
+          <h2>Bruno</h2>
+          <figure>
+            <img src="billede_2.png" alt="Hund" />
+          </figure>
+          <h3>Artikel 2</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            animi, iure aliquam laboriosam et optio perspiciatis quia nobis
+            architecto inventore, aliquid pariatur suscipit corrupti eveniet
+            provident reprehenderit, praesentium veniam earum.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>this is a footer</p>
+    </footer>
+  </body>
+
+  <script>
+    const overskrift = document.querySelector("h1");
+    const undertitel = document.querySelector("h2");
+    const h3 = document.querySelector("h3");
+    const paragraf = document.querySelector("p");
+    const footer = document.querySelector("footer");
+    const billede_1 = document.querySelector("billede_1");
+
+    document.addEventListener("DOMContentLoaded", start);
+
+    function start() {
+      console.log(overskrift.textContent);
+      console.log(undertitel.textContent);
+      console.log(h3.textContent);
+      console.log(paragraf.textContent);
+      console.log(footer);
+
+      billede_1.addEventListener("click", skiftBillede);
+    }
+
+    function skiftBillede() {
+      console.log(this);
+
+      let tal = Math.round(Math.random() * 10);
+      billede_1.src = "billede_2.png" + tal;
+    }
+  </script>
+</html>
